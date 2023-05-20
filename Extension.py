@@ -33,8 +33,6 @@ class Extension(omni.ext.IExt, Simulation):
             overview = "This is a complete simulation package",
             file_path = os.path.abspath(__file__),
             number_of_extra_frames = 1,
-            window_width = 360,
-            keep_window_open = True,
     ):
         menu_items = [MenuItemDescription(name=name, onclick_fn=lambda a=weakref.proxy(self): a._menu_callback())]
         if menu_name == "" or menu_name is None:
@@ -58,8 +56,6 @@ class Extension(omni.ext.IExt, Simulation):
             overview=overview,
             file_path=file_path,
             number_of_extra_frames=number_of_extra_frames,
-            window_width=window_width,
-            keep_window_open=keep_window_open,
             ext_id=self._ext_id,
             )
        
