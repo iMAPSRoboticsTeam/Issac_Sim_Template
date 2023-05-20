@@ -19,10 +19,10 @@ class UserInterface():
         self._window = ui.Window(name, width=window_width, height=0, visible=keep_window_open, dockPreference=ui.DockPreference.LEFT_BOTTOM)
         with self._window.frame:
             with ui.VStack(spacing=5, height=10):
-                #title = ("StakeBot Simulation")
+                #title = ("Simulation")
                 #doc_link = ("https://docs.omniverse.nvidia.com/py/isaacsim/source/extensions/omni.isaac.ui/docs/index.html")
                 # overview = (
-                #     "This is a complete control pannel for simulating and testing the StakeBot\n"
+                #     "This is a complete control pannel for simulating and testing\n"
                 # )
                 setup_ui_headers(ext_id, file_path, title, doc_link, overview)
                 
