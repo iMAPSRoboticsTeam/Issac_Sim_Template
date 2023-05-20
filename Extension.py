@@ -1,5 +1,4 @@
 import omni.ext
-from .UserInterface import UserInterface
 from omni.kit.menu.utils import add_menu_items, remove_menu_items, MenuItemDescription
 from .Simulation import Simulation
 import weakref
@@ -17,7 +16,6 @@ class Extension(omni.ext.IExt, Simulation):
         self._buttons = None
         self._ext_id = ext_id
         self.EtherBot = Simulation()
-        self._ui = UserInterface()
         self.extra_frames = []
         self.start_Extension()
 
@@ -58,7 +56,40 @@ class Extension(omni.ext.IExt, Simulation):
             number_of_extra_frames=number_of_extra_frames,
             ext_id=self._ext_id,
             )
-       
+         
+    """
 
+    USER INTERFACE
+    
+    """
+        
+    def _build_ui(self, 
+                  name, 
+                  title, 
+                  doc_link, 
+                  overview, 
+                  file_path, 
+                  number_of_extra_frames, 
+                  ext_id,
+                  ):
+        self._window = ui.Window(name, width=360, height=0, visible=True, dockPreference=ui.DockPreference.LEFT_BOTTOM)
+        with self._window.frame:
+            with ui.VStack(spacing=5, height=10):
+                #title = ("StakeBot Simulation")
+                #doc_link = ("https://docs.omniverse.nvidia.com/py/isaacsim/source/extensions/omni.isaac.ui/docs/index.html")
+                # overview = (
+                #     "This is a complete control pannel for simulating and testing the StakeBot\n"
+                # )
+                setup_ui_headers(ext_id, file_path, title, doc_link, overview)
+                
+    """
+    
+    
+    """
+    
+    def _menu_callback(self):
+        self._window.visible = not self._window.visible
+        return
+    
     def on_shutdown(self):
         print("shutdown")
