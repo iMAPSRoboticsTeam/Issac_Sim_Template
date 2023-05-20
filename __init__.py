@@ -1,4 +1,4 @@
-from .EtherBot_Extension import *
+from .Extension import *
 from .SimulationBase import SimulationBase
-from .EtherBot_Sim import EtherBotSimulation
+from .Simulation import Simulation
 from .UserInterface import UserInterface
