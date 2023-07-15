@@ -1,8 +1,13 @@
+from abc import abstractmethod
 import omni.ext
+from omni.isaac.ui.ui_utils import setup_ui_headers, get_style, btn_builder, state_btn_builder, cb_builder
+import omni.ui as ui
 from omni.kit.menu.utils import add_menu_items, remove_menu_items, MenuItemDescription
+from omni.isaac.core import World
 from .Simulation import Simulation
 import weakref
 import os
+import asyncio
 
 
 # Any class derived from `omni.ext.IExt` in top level module (defined in `python.modules` of `extension.toml`) will be
@@ -47,7 +52,7 @@ class Extension(omni.ext.IExt, Simulation):
 
         self._buttons = dict()
         
-        self._ui._build_ui(
+        self._build_ui(
             name=name,
             title=title,
             doc_link=doc_link,
