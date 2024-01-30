@@ -114,7 +114,7 @@ class Extension(omni.ext.IExt, Simulation):
                         self._buttons["Load New Simulator"].enabled = True
                         
 
-                        dict = {
+                        dict = { 
                             "label": "Sim Reset", # Give reset button a name
                             "type": "button",
                             "text": "Reset",
