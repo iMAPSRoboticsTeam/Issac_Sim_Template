@@ -33,7 +33,7 @@ class SimulationBase(object):
             await create_new_stage_async()
             self._world = World(**self._world_settings)
             await self._world.initialize_simulation_context_async()
-            self.setup_scene(self._loadWorld, self._freeDrive)
+            self.setup_scene(self._loadWorld)
         else:
             self._world = World.instance()
         self._current_tasks = self._world.get_current_tasks()
