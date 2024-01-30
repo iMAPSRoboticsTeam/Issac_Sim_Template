@@ -6,7 +6,7 @@ This template is used to help get started on developing simulations with Issac S
 
 ## Create An Extension
 
-First create a new extension by opening the the extension window 
+First create a new extension by opening the extension window 
 Window >> Extensions
 
 Next click the green plus sign on the top left of the window, Select "New Extension Template Project"
