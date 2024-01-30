@@ -22,9 +22,10 @@ Next, open a git bash terminal
 
 Click on the three dots in the upper left corner of VS Code
 
-Click "New Terminal" a terminal will open on the bottom of VS Code window. In this window, click on the down arrow next to the white plus sign, click Git Bash.
+Click "New Terminal" a terminal will open on the bottom of VS Code window. In this window, click on the down arrow next to the white plus sign, click Git Bash. 
+> Assuming you have git installed on your windows machine click source control in VS Code to downolad.
 
-This is git bash terminal, here we can clone the repo into the extension by typing.
+This is a git bash terminal, here we can clone the repo into the extension by typing.
 
 ```
 git clone https://github.com/iMAPSRoboticsTeam/Issac_Sim_Template.git
