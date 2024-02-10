@@ -37,6 +37,11 @@ After the repo has been cloned, open file explorer, locate and double click the 
 
 After you run this script the code template should now be ready to use. Issac Sim should now have a new extension window.
 
+For Linux, run the following command:
+```
+./Issac_Sim_Template/setup.sh
+```
+
 # Getting Started
 
 This template sets up the developer with all the necessary functions to create and build simulations through a GUI. 
